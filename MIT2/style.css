@@ -1,0 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  color: #ededed;
+  background: #081b29;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: #051129;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  position: relative;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+  opacity: 0;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+
+
+.navbar a:hover {
+  color: #0ef;
+
+}
+
+.dropdown{
+      position:relative;  
+}
+.dropdown-menu{
+  position: absolute
+  left: 0;
+  
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  background: url(images/11676f.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
+
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  color: #ffffff;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: .2s;
+}
+
+.home-content h3 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  animation: slideRight 1s ease forwards;
+  animation-delay: .1s;
+
+
+}
+
+.home-content h2 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  color: #ffffff;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: .2s;
+}
+
+.home-content p {
+  font-size: 20px;
+  font-weight: 700;
+  margin: -1px 0;
+
+}
+
+.home-content p:nth-of-type(2) {
+  margin: 30px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: .5s;
+}
+
+.home-content p span {
+  color: #0EF;
+}
+
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  transition: .5s ease;
+  opacity: 1;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+
+  margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1s;
+  box-shadow: 0 0 5px #0ef;
+}
+
+.btn-box:hover {
+  box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 100px cyan,
+    0 0 200px cyan
+}
+
+
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-img img {
+  padding-bottom: 20%;
+  max-width: 630px;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-us h2 {
+  font-size: 60px;
+  display: flex;
+  flex-direction: column; /* Adjust this based on your layout */
+  align-items: center; /* Adjust this as needed */
+}
+
+.about-us h2 span {
+  color: #0ef;
+}
+
+.about-us h4 {
+  font-size: 29px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.7;
+  margin: 15px 0 30px;
+}
+
+.about-us p {
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+
+
+}
+
+#mission {
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 70px;
+}
+
+.sub-title span {
+  color: #0ef;
+
+}
+
+.container {
+  padding: 90px;
+}
+
+.mission-list {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(259, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  justify-content: center; /* Adjust this as needed */
+  align-items: center; /* Adjust this as needed */
+}
+
+.mission-list div {
+  background-color: transparent;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 13px;
+  border-right: 10px;
+  border-radius: 20px;
+  transition: background 0.5s, transform 0.5s;
+  box-shadow: 1px 1px 20px #012290f7,
+    1px 1px 40px #0053b8f7
+}
+
+.mission-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.mission-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.mission-list div a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.read {
+  display: inline-block;
+  padding: 12px 28%;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1s;
+  box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+
+.read:hover {
+  box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 100px cyan,
+    0 0 200px cyan
+}
+
+.mission-list div:hover {
+  transform: translateY(-10px);
+}
+
+section {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
+}
+
+/* Style for the sub-title */
+.sub-title {
+  font-size: 80px; 
+  text-align: center;
+}
+
+/* Style for the span within the sub-title */
+.sub-title span {
+  color: #00eeff; /* Your desired text color */
+  /* You can add additional styling as needed */
+}
+
+/* Style for the "Our Board" section */
+/* Style for the "Our Board" section */
+.board-container {
+  /* margin-top: -800px;  mess with this*/ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: flex-start; /* Align items at the top */
+  padding: 20px; /* Add padding as needed */
+  gap: 100px; /* Spacing between board members */
+  text-align: center; /* Center the text within each card */
+}
+
+
+.
+
+.board-card {
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum card width as needed */
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 1px;
+  border-radius: 10%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.board-card .profile-pic {
+  width: 250px; /* Adjust the profile picture size as needed */
+  height: 250px; /* Adjust the profile picture size as needed */
+  border-radius: 10%; /* Make the image circular */
+  object-fit: cover;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.board-card h2 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.board-card p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(1px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(1px);
+    opacity: 1;
+  }
+}
+
+/* CSS Animation */
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to the element when the class is added */
+.animate-slide {
+  animation: slide 1s ease forwards;
+}
+
+/*media tags*/
+
+@media (max-width: 768px) {
+  .mission-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+ .mission-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
